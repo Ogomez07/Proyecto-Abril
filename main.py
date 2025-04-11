@@ -27,9 +27,9 @@ if __name__ == "__main__":
     df = etl.map_education_level(df)
     df['age_group'] = df['age'].apply(etl.group_ages)
 
-    # viz.plot_numerical_distributions(df)
-    # viz.plot_individual_boxplots(df)
-    # viz.plot_boxplot_with_y(df)
+    viz.plot_numerical_distributions(df)
+    viz.plot_individual_boxplots(df)
+    viz.plot_boxplot_with_y(df)
 
     statistic.corr_vars(df)
 
@@ -39,10 +39,10 @@ if __name__ == "__main__":
     df_no_ftd =etl.no_ftd(df)
     statistic.corr_matrix_no_clients(df_no_ftd)
 
-    # viz.plot_columns(df_yes_ftd)
+    viz.plot_columns(df_yes_ftd)
 
-    # viz.plot_age_group(df_yes_ftd, 'age_group') 
-    # viz.plot_age_group(df_no_ftd, 'age_group')
+    viz.plot_age_group(df_yes_ftd, 'age_group') 
+    viz.plot_age_group(df_no_ftd, 'age_group')
 
     eda.info_cualitative_vars(df_yes_ftd, 'age')
     eda.info_cualitative_vars(df_no_ftd, 'age')
@@ -56,17 +56,17 @@ if __name__ == "__main__":
     columnas = columns
     eda.acceptance_rate_multiple(df, columnas)
     results = eda.acceptance_rate_multiple(df, columnas)
-    # viz.plot_aceptation(results)
+    viz.plot_aceptation(results)
 
-    # viz.plot_job_education_gorup(df_yes_ftd)
-    # viz.plot_job_education_gorup(df_no_ftd)
+    viz.plot_job_education_gorup(df_yes_ftd)
+    viz.plot_job_education_gorup(df_no_ftd)
 
-    # viz.plot_average_balance_by_job(df_yes_ftd)
-    # viz.plot_average_balance_by_job(df)
-    # viz.plot_average_balance_by_job(df_no_ftd)
+    viz.plot_average_balance_by_job(df_yes_ftd)
+    viz.plot_average_balance_by_job(df)
+    viz.plot_average_balance_by_job(df_no_ftd)
 
-   #  viz.scatter_balance_by_job(df_yes_ftd)
-    # viz.scatter_balance_by_job(df_no_ftd)
+    viz.scatter_balance_by_job(df_yes_ftd)
+    viz.scatter_balance_by_job(df_no_ftd)
 
     statistic.normality_test(df, ['age', 'balance'])
     viz.plot_density(df, ['age', 'balance'])
