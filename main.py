@@ -28,8 +28,6 @@ if __name__ == "__main__":
     df['age_group'] = df['age'].apply(etl.group_ages)
 
     viz.plot_numerical_distributions(df)
-    viz.plot_individual_boxplots(df)
-    viz.plot_boxplot_with_y(df)
 
     statistic.corr_vars(df)
 

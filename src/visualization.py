@@ -58,42 +58,7 @@ def plot_numerical_distributions(df):
     plt.tight_layout()
     plt.show()
 
-def plot_individual_boxplots(df):
-    """
-    Genera boxplots individuales:
-    - Uno por cada variable numérica (distribución simple).
-    - Uno por cada variable categórica cruzada con 'age' (distribución por grupo).
-    """
-    numerical_vars = ['age', 'balance', 'day', 'duration', 'campaign', 'pdays', 'previous']
-    categorical_vars = ['job', 'marital', 'education', 'default', 'housing', 'loan',
-                        'contact', 'poutcome', 'y']
 
-    # 1. Boxplots de variables numéricas
-    if len(numerical_vars) == 0:
-        print("No se encontraron columnas numéricas en el DataFrame.")
-    else:
-        for col in numerical_vars:
-            plt.figure(figsize=(8, 4))
-            sns.boxplot(x=df[col], color='lightblue')
-            plt.title(f'Boxplot de {col}')
-            plt.xlabel(col)
-            plt.tight_layout()
-            plt.show()
-
-    # 2. Boxplots cruzando categóricas con 'edad'
-    if len(categorical_vars) == 0:
-        print('No se encontraron columnas categóricas en el DataFrame')
-
-    else:
-        for cat in categorical_vars:
-            plt.figure(figsize=(10, 6))
-            sns.boxplot(data=df, x=cat, y='age', hue=cat, palette='Set2')
-            plt.title(f'Distribución de la edad según {cat}')
-            plt.xlabel(cat)
-            plt.ylabel('Edad')
-            plt.xticks(rotation=45)
-            plt.tight_layout()
-            plt.show()
 
 def plot_boxplot_with_y(df):
     """
