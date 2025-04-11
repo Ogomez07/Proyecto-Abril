@@ -11,20 +11,20 @@ Este proyecto tiene como objetivo analizar las características de los clientes 
 
 
 ### 📁 Estructura del proyecto
-
-├── data/               ***Archivos de datos sin procesar y finalizado**
+```
+├── data/        `→`  Archivos de datos sin procesar y finalizado
 │   ├── raw/
 │   └── processed/
-├── notebooks/          ***Notebooks con el análisis y estructura del proyecto***
-├── dashboards/         ***Presentación / Dashboard del proyecto***
-├── src/                 ***Contiene de forma estructurada***
+├── notebooks/       `→`   Notebooks con el análisis y estructura del proyecto
+├── dashboards/      `→`  Presentación / Dashboard del proyecto
+├── src/             `→` Contiene de forma estructurada
 │   ├── etl.py
 │   ├── eda.py
 │   └── stats.py
-├── requirements.txt    ***Entorno con las librerías necesarias para desarrollar el proyecto**
+├── requirements.txt  `→`  Entorno con las librerías necesarias para desarrollar el proyecto
 ├── .gitignore
 └── README.md
-
+```
 
 ###  👓 Objetivos del proyecto
 
